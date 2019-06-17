@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.hs.dgsw.shoppingmall_back.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.hs.dgsw.shoppingmall_back.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.hs.dgsw.shoppingmall_back.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.hs.dgsw.shoppingmall_back.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.hs.dgsw.shoppingmall_back.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.hs.dgsw.shoppingmall_back.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shoppingmall.iml" filepath="$PROJECT_DIR$/shoppingmall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shoppingmall_front/shoppingmall_front.iml" filepath="$PROJECT_DIR$/shoppingmall_front/shoppingmall_front.iml" />
+    </modules>
+  </component>
+</project>
