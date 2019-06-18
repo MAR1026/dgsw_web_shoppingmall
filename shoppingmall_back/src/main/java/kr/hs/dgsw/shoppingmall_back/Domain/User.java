@@ -41,7 +41,7 @@ public class User {
     @Column(nullable = false)
     private String name;
 
-    @Column(unique = true)
+    @Column()
     private String tel;
 
     @Column(unique = true)
