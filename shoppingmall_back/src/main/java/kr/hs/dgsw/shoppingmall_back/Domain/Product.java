@@ -20,7 +20,6 @@ public class Product {
     @Column(nullable = false)
     private String category;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String thumbnailPath;
 
     @Column(nullable = false)

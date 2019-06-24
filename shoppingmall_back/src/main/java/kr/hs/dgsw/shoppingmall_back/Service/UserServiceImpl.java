@@ -16,7 +16,8 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User Create(User user) {
-        System.out.println(user.getAccount());
+        System.out.println(user);
+
 
         if(this.userRepository.findByAccountAndEmailAndPhone(user.getAccount(), user.getEmail(), user.getPhone()).isPresent()) {
             return null;

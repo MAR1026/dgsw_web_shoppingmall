@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.persistence.*;
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
@@ -30,8 +31,10 @@ public class User {
     public void setPassword(String password) {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-512");
-
+            md.update(password.getBytes(), 0, password.getBytes().length);
+            this.password = new BigInteger(1, md.digest()).toString(16);
         } catch (NoSuchAlgorithmException e) {
+            System.out.println("error");
             Logger logger = LoggerFactory.getLogger(User.class);
             logger.warn(e.getMessage());
             this.password = null;
