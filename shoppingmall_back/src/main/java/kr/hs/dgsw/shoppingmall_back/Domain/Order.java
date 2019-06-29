@@ -3,9 +3,12 @@ package kr.hs.dgsw.shoppingmall_back.Domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.List;
 
 @Data
 @Entity
@@ -17,10 +20,11 @@ public class Order {
     private Long id;
 
     @Column(nullable = false)
-    private Long productId;
+    private String userAccount;
 
-    @Column(nullable = false)
-    private int quantity;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    @JoinColumn(name = "orderId")
+    private Collection<OrderItems> orderList;
 
     @Column(nullable = false)
     private int totalPrice;
@@ -30,3 +34,4 @@ public class Order {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime created;
 }
+

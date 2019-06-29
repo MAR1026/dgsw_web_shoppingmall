@@ -51,6 +51,7 @@ public class ProductServiceImpl implements ProductService{
             found.setRemainAmount(Optional.ofNullable(product.getRemainAmount()).orElse(found.getRemainAmount()));
             found.setThumbnailPath(Optional.ofNullable(product.getThumbnailPath()).orElse(found.getThumbnailPath()));
             found.setTitle(Optional.ofNullable(product.getTitle()).orElse(found.getTitle()));
+            found.setSubCategory(Optional.ofNullable(product.getSubCategory()).orElse(found.getSubCategory()));
 
             return this.productRepository.save(found);
         }

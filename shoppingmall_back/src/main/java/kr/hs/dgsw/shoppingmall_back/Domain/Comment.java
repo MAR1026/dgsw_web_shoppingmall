@@ -16,7 +16,10 @@ public class Comment {
     private Long id;
 
     @Column(nullable = false)
-    private String userId;
+    private Long productId;
+
+    @Column(nullable = false)
+    private String userAccount;
 
     @Column(nullable = false)
     private String content;

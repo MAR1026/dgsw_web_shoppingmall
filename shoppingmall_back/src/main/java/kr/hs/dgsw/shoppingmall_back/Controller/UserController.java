@@ -25,6 +25,11 @@ public class UserController {
         return this.userService.GetUserInfo(account);
     }
 
+    @GetMapping(value = "/findAccountById/{id}")
+    public String findAccountById(@PathVariable Long id) {
+        return this.userService.findAccountById(id);
+    }
+
     @GetMapping(value = "/findAll")
     public List<User> findAllUser() {
         return this.userService.GetAllUserInfo();

@@ -51,6 +51,18 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public String findAccountById(Long id) {
+        Optional<User> found = this.userRepository.findById(id);
+
+        if(found.isPresent()) {
+            return found.get().getAccount();
+        } else {
+            return null;
+        }
+
+    }
+
+    @Override
     public List<User> GetAllUserInfo() {
         return this.userRepository.findAll();
     }

@@ -20,6 +20,9 @@ public class Product {
     @Column(nullable = false)
     private String category;
 
+    @Column(nullable = false)
+    private String subCategory;
+
     private String thumbnailPath;
 
     @Column(nullable = false)
@@ -50,6 +53,7 @@ public class Product {
     private int price;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    @JoinColumn(name = "productId")
     private List<Comment> comments;
 
     @CreationTimestamp
